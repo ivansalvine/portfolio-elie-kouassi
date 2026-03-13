@@ -1,0 +1,346 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>KOUASSI Konan-kan Elie | Portfolio Architecture & Génie Civil</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <!-- Font Awesome pour les icônes -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+    <!-- Google Fonts pour une typographie professionnelle -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Montserrat:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- Header avec navigation -->
+    <header class="header">
+      <nav class="nav container">
+        <div class="logo">
+          <a href="#accueil">KE<span>.</span></a>
+        </div>
+        <ul class="nav-menu">
+          <li><a href="#accueil" class="nav-link active">Accueil</a></li>
+          <li><a href="#projets" class="nav-link">Réalisations</a></li>
+          <li><a href="#competences" class="nav-link">Expertises</a></li>
+          <li><a href="#parcours" class="nav-link">Parcours</a></li>
+          <li><a href="#contact" class="nav-link">Contact</a></li>
+        </ul>
+        <div class="hamburger">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <!-- Section Accueil / Hero avec informations personnelles -->
+      <section id="accueil" class="hero">
+        <div class="container hero-container">
+          <div class="hero-content animate-fade-in">
+            <br />
+            <br />
+            <br />
+            <br />
+            <!-- <br /> -->
+            <h1>KOUASSI Konan-kan Elie</h1>
+            <h2>
+              Technicien Supérieur en Génie Civil | Ingénieur de conception en
+              devenir
+            </h2>
+            <p class="hero-quote">
+              "Passionné d'architecture, je dédie mes journées à approfondir mes
+              connaissances dans ce domaine afin de mieux répondre aux besoins
+              de notre société."
+            </p>
+            <div class="hero-details">
+              <p>
+                <i class="fas fa-map-marker-alt"></i> Abidjan, Côte d'Ivoire
+              </p>
+              <p>
+                <i class="fas fa-phone"></i> (+225) 07 67 45 26 87 / 05 85 86 82
+                64
+              </p>
+              <p><i class="fas fa-envelope"></i> Eliekouassi007@gmail.com</p>
+            </div>
+            <div class="hero-buttons">
+              <a href="#projets" class="btn btn-primary"
+                >Voir mes réalisations</a
+              >
+              <a href="#contact" class="btn btn-secondary">Me contacter</a>
+            </div>
+          </div>
+          <div class="hero-image animate-slide-in">
+            <div class="image-frame">
+              <img
+                src="assets/profile/profile.png"
+                alt="KOUASSI Konan-kan Elie"
+                class="profile-img"
+              />
+            </div>
+          </div>
+        </div>
+        <div class="scroll-indicator">
+          <span>Découvrir</span>
+          <i class="fas fa-chevron-down"></i>
+        </div>
+      </section>
+
+      <!-- Section Projets avec Galerie -->
+      <section id="projets" class="projects">
+        <div class="container">
+          <div class="section-header">
+            <h2>Mes Réalisations</h2>
+            <div class="section-line"></div>
+            <p>Projets professionnels et modélisations architecturales</p>
+          </div>
+
+          <!-- Filtres -->
+          <div class="project-filters">
+            <button class="filter-btn active" data-filter="all">Tous</button>
+            <button class="filter-btn" data-filter="chantier">
+              Chantiers réalisés
+            </button>
+            <button class="filter-btn" data-filter="etudes">
+              Études techniques
+            </button>
+            <button class="filter-btn" data-filter="lumion">
+              Rendus LUMION
+            </button>
+            <button class="filter-btn" data-filter="archicad">
+              Modélisations Archicad
+            </button>
+          </div>
+
+          <!-- Grille de projets -->
+          <div class="projects-grid" id="projectsGrid">
+            <!-- Les projets seront générés dynamiquement en JavaScript -->
+          </div>
+        </div>
+      </section>
+
+      <!-- Section Compétences techniques -->
+      <section id="competences" class="skills">
+        <div class="container">
+          <div class="section-header">
+            <h2>Expertises Techniques</h2>
+            <div class="section-line"></div>
+            <p>Logiciels maîtrisés et compétences professionnelles</p>
+          </div>
+
+          <div class="skills-container">
+            <div class="skills-category">
+              <h3>Logiciels de modélisation</h3>
+              <div class="skill-item">
+                <span>AutoCAD</span>
+                <div class="progress-bar">
+                  <div class="progress" data-progress="90"></div>
+                </div>
+              </div>
+              <div class="skill-item">
+                <span>Archicad</span>
+                <div class="progress-bar">
+                  <div class="progress" data-progress="85"></div>
+                </div>
+              </div>
+              <div class="skill-item">
+                <span>Lumion (Rendu 3D)</span>
+                <div class="progress-bar">
+                  <div class="progress" data-progress="88"></div>
+                </div>
+              </div>
+            </div>
+
+            <div class="skills-category">
+              <h3>Techniques du bâtiment</h3>
+              <div class="skill-item">
+                <span>Métré</span>
+                <div class="progress-bar">
+                  <div class="progress" data-progress="85"></div>
+                </div>
+              </div>
+              <div class="skill-item">
+                <span>Suivi de chantier</span>
+                <div class="progress-bar">
+                  <div class="progress" data-progress="92"></div>
+                </div>
+              </div>
+              <div class="skill-item">
+                <span>Études techniques</span>
+                <div class="progress-bar">
+                  <div class="progress" data-progress="80"></div>
+                </div>
+              </div>
+            </div>
+
+            <div class="skills-category">
+              <h3>Compétences complémentaires</h3>
+              <div class="skill-item">
+                <span>Permis de conduire</span>
+                <div class="progress-bar">
+                  <div class="progress" data-progress="100"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section Parcours (Formation & Expérience) -->
+      <section id="parcours" class="journey">
+        <div class="container">
+          <div class="section-header">
+            <h2>Mon Parcours</h2>
+            <div class="section-line"></div>
+            <p>Formation académique et expériences professionnelles</p>
+          </div>
+
+          <div class="journey-container">
+            <!-- Formation -->
+            <div class="journey-column">
+              <h3 class="journey-title">
+                <i class="fas fa-graduation-cap"></i> Formation académique
+              </h3>
+
+              <div class="timeline">
+                <div class="timeline-item">
+                  <div class="timeline-date">2022</div>
+                  <div class="timeline-content">
+                    <h4>BTS Génie Civil - Option Bâtiment</h4>
+                    <p>ESBTP Yamoussoukro, Abidjan</p>
+                  </div>
+                </div>
+
+                <div class="timeline-item">
+                  <div class="timeline-date">2020</div>
+                  <div class="timeline-content">
+                    <h4>BAC Série D</h4>
+                    <p>Lycée Moderne Port Bouet, Abidjan</p>
+                  </div>
+                </div>
+
+                <div class="timeline-item">
+                  <div class="timeline-date">2019</div>
+                  <div class="timeline-content">
+                    <h4>BEPC</h4>
+                    <p>Lycée Moderne Port Bouet, Abidjan</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Expérience -->
+            <div class="journey-column">
+              <h3 class="journey-title">
+                <i class="fas fa-briefcase"></i> Expérience professionnelle
+              </h3>
+
+              <div class="timeline">
+                <div class="timeline-item">
+                  <div class="timeline-date">Sept 2023 - Présent</div>
+                  <div class="timeline-content">
+                    <h4>Chef de chantier</h4>
+                    <p class="company">
+                      SIBa (Société Ivoirienne de Béton Appliqué)
+                    </p>
+                    <p class="description">
+                      Suivi des travaux de réalisation d'une cité
+                    </p>
+                  </div>
+                </div>
+
+                <div class="timeline-item">
+                  <div class="timeline-date">Fév 2023 - Mai 2023</div>
+                  <div class="timeline-content">
+                    <h4>Stagiaire assistant chargé des études</h4>
+                    <p class="company">ANAH (ex SICOGI)</p>
+                  </div>
+                </div>
+
+                <div class="timeline-item">
+                  <div class="timeline-date">Août 2021 - Sept 2021</div>
+                  <div class="timeline-content">
+                    <h4>Assistant technicien des travaux</h4>
+                    <p class="company">GANO COMPAGNIE</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section Contact -->
+      <section id="contact" class="contact">
+        <div class="container">
+          <div class="section-header">
+            <h2>Contact</h2>
+            <div class="section-line"></div>
+            <p>Discutons de vos projets</p>
+          </div>
+
+          <div class="contact-container">
+            <div class="contact-info">
+              <div class="contact-card">
+                <i class="fas fa-map-marker-alt"></i>
+                <h3>Localisation</h3>
+                <p>Abidjan, Côte d'Ivoire</p>
+              </div>
+              <div class="contact-card">
+                <i class="fas fa-phone-alt"></i>
+                <h3>Téléphone</h3>
+                <p>(+225) 07 67 45 26 87</p>
+                <p>(+225) 05 85 86 82 64</p>
+              </div>
+              <div class="contact-card">
+                <i class="fas fa-envelope"></i>
+                <h3>Email</h3>
+                <p>Eliekouassi007@gmail.com</p>
+              </div>
+            </div>
+
+            <div class="social-links">
+              <a href="#" class="social-link" title="LinkedIn"
+                ><i class="fab fa-linkedin-in"></i
+              ></a>
+              <a href="#" class="social-link" title="WhatsApp"
+                ><i class="fab fa-whatsapp"></i
+              ></a>
+              <a href="#" class="social-link" title="Email"
+                ><i class="fas fa-envelope"></i
+              ></a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container">
+        <p>
+          &copy; 2024 KOUASSI Konan-kan Elie - Technicien en Génie Civil. Tous
+          droits réservés.
+        </p>
+      </div>
+    </footer>
+
+    <!-- Modal pour la prévisualisation des images -->
+    <div id="imageModal" class="modal">
+      <span class="modal-close">&times;</span>
+      <div class="modal-content">
+        <img id="modalImage" src="" alt="Aperçu du projet" />
+        <div class="modal-caption"></div>
+      </div>
+      <button class="modal-prev"><i class="fas fa-chevron-left"></i></button>
+      <button class="modal-next"><i class="fas fa-chevron-right"></i></button>
+    </div>
+
+    <script src="js/main.js"></script>
+  </body>
+</html>
