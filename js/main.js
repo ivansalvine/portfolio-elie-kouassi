@@ -67,15 +67,12 @@ const projectsData = [
   },
   {
     id: 6,
-    title: "Études techniques - ANAH",
+    title: "Études techniques - Gano Compagnie",
     category: "etudes",
-    mainImage: "assets/projects/1-villa-basse.jpeg",
-    images: [
-      "assets/projects/1-villa-basse.jpeg",
-      "assets/projects/3-villa-basse.jpeg",
-    ],
-    description: "Plans et métrés réalisés lors du stage à l'ANAH",
-    tags: ["ANAH", "Études", "Plans"],
+    mainImage: "assets/projects/rea1.jpeg",
+    images: ["assets/projects/rea1.jpeg", "assets/projects/rea2.jpeg"],
+    description: "Plans et métrés réalisés lors du stage à la Gano Compagnie",
+    tags: ["Gano Compagnie", "Études", "Plans"],
   },
 ];
 
