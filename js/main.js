@@ -43,27 +43,58 @@ const projectsData = [
   },
   {
     id: 4,
-    title: "Rendu LUMION - Hôtel",
-    category: "lumion",
-    mainImage: "assets/projects/5-hotel-Yakro.jpeg",
+    title: "Suivie et contrôle des travaux de fondation",
+    category: "suivi",
+    mainImage: "assets/projects/fond1.jpeg",
     images: [
-      "assets/projects/5-hotel-Yakro.jpeg",
-      "assets/projects/7-hotel-Yakro.jpeg",
+      "assets/projects/fond1.jpeg",
+      "assets/projects/fond2.jpeg",
+      "assets/projects/fond3.jpeg",
+      "assets/projects/fond4.jpeg",
+      "assets/projects/fond5.jpeg",
+      "assets/projects/fond6.jpeg",
+      "assets/projects/fond7.jpeg",
+      "assets/projects/fond8.jpeg",
+      "assets/projects/fond9.jpeg",
+      "assets/projects/fond10.jpeg",
+      "assets/projects/fond11.jpeg",
+      "assets/projects/fond12.jpeg",
+      "assets/projects/fond13.jpeg",
+      "assets/projects/fond14.jpeg",
+      "assets/projects/fond15.jpeg",
     ],
-    description: "Rendu photoréaliste du projet hôtelier avec LUMION",
-    tags: ["LUMION", "Rendu 3D", "Visualisation"],
+    description:
+      "Suivie et contrôle des travaux de fondation de deux immeubles R+4 à usage d’habitation",
+    tags: ["Suivi", "Travaux", "Assurance qualité", "Fondation"],
   },
   {
     id: 5,
-    title: "Modélisation Archicad - Maison R+1",
-    category: "archicad",
-    mainImage: "assets/projects/3-maison-r+2.jpeg",
+    title: "Suivie et contrôle de 6 immeubles R+4",
+    category: "suivi",
+    mainImage: "assets/projects/tc11.jpeg",
     images: [
-      "assets/projects/3-maison-r+2.jpeg",
-      "assets/projects/4-maison-r+2.jpeg",
+      "assets/projects/tc1.jpeg",
+      "assets/projects/tc2.jpeg",
+      "assets/projects/tc3.jpeg",
+      "assets/projects/tc4.jpeg",
+      "assets/projects/tc5.jpeg",
+      "assets/projects/tc6.jpeg",
+      "assets/projects/tc7.jpeg",
+      "assets/projects/tc8.jpeg",
+      "assets/projects/tc9.jpeg",
+      "assets/projects/tc10.jpeg",
+      "assets/projects/tc11.jpeg",
     ],
-    description: "Modélisation BIM complète d'une maison R+1 avec Archicad",
-    tags: ["Archicad", "BIM", "Modélisation"],
+    description:
+      "Suivie et contrôle de 6 immeubles R+4 du gros oeuvre jusqu’au second oeuvre",
+    tags: [
+      "Suivi",
+      "Travaux",
+      "Assurance qualité",
+      "BIM",
+      "Gros oeuvre",
+      "Second oeuvre",
+    ],
   },
   {
     id: 6,
@@ -103,35 +134,35 @@ function renderProjects(projects) {
   projectsGrid.innerHTML = projects
     .map(
       (project) => `
-        <div class="project-card" data-category="${project.category}" data-project-id="${project.id}">
-            <div class="project-image">
-                <div class="image-loader">
-                    <div class="loader-spinner"></div>
-                </div>
-                <img 
-                    src="${project.mainImage}" 
-                    alt="${project.title}" 
-                    loading="lazy"
-                    data-src="${project.mainImage}"
-                    class="lazy-image"
-                    onload="this.parentElement.classList.add('loaded')"
-                    onerror="this.src='https://via.placeholder.com/800x600?text=Image+non+disponible'">
-                <div class="project-overlay">
-                    <button class="project-zoom" data-id="${project.id}" aria-label="Voir les photos">
-                        <i class="fas fa-images"></i>
-                        <span class="image-count">${project.images.length} photo${project.images.length > 1 ? "s" : ""}</span>
-                    </button>
-                </div>
-            </div>
-            <div class="project-info">
-                <h3>${project.title}</h3>
-                <p>${project.description}</p>
-                <div class="project-tags">
-                    ${project.tags.map((tag) => `<span>${tag}</span>`).join("")}
-                </div>
-            </div>
-        </div>
-    `,
+          <div class="project-card" data-category="${project.category}" data-project-id="${project.id}">
+              <div class="project-image">
+                  <div class="image-loader">
+                      <div class="loader-spinner"></div>
+                  </div>
+                  <img 
+                      src="${project.mainImage}" 
+                      alt="${project.title}" 
+                      loading="lazy"
+                      data-src="${project.mainImage}"
+                      class="lazy-image"
+                      onload="this.parentElement.classList.add('loaded')"
+                      onerror="this.src='https://via.placeholder.com/800x600?text=Image+non+disponible'">
+                  <div class="project-overlay">
+                      <button class="project-zoom" data-id="${project.id}" aria-label="Voir les photos">
+                          <i class="fas fa-images"></i>
+                          <span class="image-count">${project.images.length} photo${project.images.length > 1 ? "s" : ""}</span>
+                      </button>
+                  </div>
+              </div>
+              <div class="project-info">
+                  <h3>${project.title}</h3>
+                  <p>${project.description}</p>
+                  <div class="project-tags">
+                      ${project.tags.map((tag) => `<span>${tag}</span>`).join("")}
+                  </div>
+              </div>
+          </div>
+      `,
     )
     .join("");
 }
@@ -202,11 +233,11 @@ function handleNoResults(filterValue, visibleCount) {
       const message = document.createElement("div");
       message.className = "no-results-message";
       message.innerHTML = `
-        <i class="fas fa-folder-open"></i>
-        <h3>Aucun projet dans cette catégorie</h3>
-        <p>Explorez d'autres catégories pour découvrir mes réalisations en ${filterLabels[filterValue] || filterValue}</p>
-        <button class="btn btn-secondary reset-filters">Voir tous les projets</button>
-      `;
+          <i class="fas fa-folder-open"></i>
+          <h3>Aucun projet dans cette catégorie</h3>
+          <p>Explorez d'autres catégories pour découvrir mes réalisations en ${filterLabels[filterValue] || filterValue}</p>
+          <button class="btn btn-secondary reset-filters">Voir tous les projets</button>
+        `;
       projectsGrid.after(message);
 
       // Bouton pour réinitialiser les filtres
@@ -244,10 +275,10 @@ function initializeModal() {
   const zoomControls = document.createElement("div");
   zoomControls.className = "zoom-controls";
   zoomControls.innerHTML = `
-    <button class="zoom-in" aria-label="Zoom avant"><i class="fas fa-search-plus"></i></button>
-    <button class="zoom-out" aria-label="Zoom arrière"><i class="fas fa-search-minus"></i></button>
-    <button class="zoom-reset" aria-label="Réinitialiser"><i class="fas fa-undo"></i></button>
-  `;
+      <button class="zoom-in" aria-label="Zoom avant"><i class="fas fa-search-plus"></i></button>
+      <button class="zoom-out" aria-label="Zoom arrière"><i class="fas fa-search-minus"></i></button>
+      <button class="zoom-reset" aria-label="Réinitialiser"><i class="fas fa-undo"></i></button>
+    `;
 
   modal.querySelector(".modal-content").appendChild(imageCounter);
   modal.querySelector(".modal-content").appendChild(thumbnailsContainer);
@@ -286,11 +317,11 @@ function initializeModal() {
     thumbnailsContainer.innerHTML = currentGallery.images
       .map(
         (img, index) => `
-        <div class="thumbnail-dot ${index === currentGallery.currentIndex ? "active" : ""}" 
-             data-index="${index}"
-             title="Voir image ${index + 1}">
-        </div>
-      `,
+          <div class="thumbnail-dot ${index === currentGallery.currentIndex ? "active" : ""}" 
+              data-index="${index}"
+              title="Voir image ${index + 1}">
+          </div>
+        `,
       )
       .join("");
 
